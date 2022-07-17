@@ -23,14 +23,14 @@ final public class GTRepsSet: GTSet {
 	@NSManaged private var weight: Double
 	
 	override public var description: String {
-		return "\(reps)\(timesSign)\(weight.toString())\(GTRepsSet.kgLabel.string)"
+		return "\(reps)\(timesSign)\(weight.toString())\(GTRepsSet.lbLabel.string)"
 	}
 	
 	public override func descriptionWithSecondaryInfoChange(from ctrl: ExecuteWorkoutController) -> NSAttributedString {
 		let ch = ctrl.secondaryInfoChange(for: self)
 		let res = NSMutableAttributedString(string: "\(reps)\(timesSign)")
 		res.append(weight.secondaryInfoDescriptionEvenForZero(withChange: ch))
-		res.append(GTRepsSet.kgLabel)
+		res.append(GTRepsSet.lbLabel)
 		
 		return res
 	}
@@ -87,7 +87,7 @@ final public class GTRepsSet: GTSet {
 	
 	private static let repsLabel = GTLocalizedString("CUR_SET_%lld_REPS", comment: "reps")
 	private static let timesSignLabel = NSAttributedString(string: timesSign)
-	private static let kgLabel = NSAttributedString(string: "kg")
+	private static let lbLabel = NSAttributedString(string: "lbs")
 	
 	override func mainInfoDescription(with change: Double) -> NSAttributedString {
 		let repsDescription = NSMutableAttributedString(string: String(format: Self.repsLabel, reps))
@@ -106,7 +106,7 @@ final public class GTRepsSet: GTSet {
 	}
 	
 	override public var secondaryInfoLabel: NSAttributedString {
-		return GTRepsSet.kgLabel
+		return GTRepsSet.lbLabel
 	}
 	
 	// MARK: - iOS/watchOS interface
