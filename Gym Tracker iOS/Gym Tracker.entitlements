@@ -18,7 +18,7 @@
 	</array>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.marcoboschi.gymtracker.notificationdata</string>
+		<string>group.blwinters.gymtracker.notifications</string>
 	</array>
 </dict>
 </plist>

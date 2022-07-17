@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>Marco-Boschi.ios.Gym-Tracker</string>
+	<string>com.blwinters.ios.Gym-Tracker</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>
